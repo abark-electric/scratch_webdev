@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'webdev_app',    # Added
+    'rest_framework',    # Added
 ]
 
 MIDDLEWARE = [
@@ -75,8 +77,14 @@ WSGI_APPLICATION = 'webdev_tutorial.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        "CLIENT": {
+           "name": 'web_development',
+           "host": 'mongodb+srv://abrar:iLOVEmongodb123#@cluster0.hchxv.mongodb.net/web_development?retryWrites=true&w=majority',
+           "username": 'abrar',
+           "password": 'iLOVEmongodb123',
+           "authMechanism": 'SCRAM-SHA-1',
+        },
     }
 }
 
