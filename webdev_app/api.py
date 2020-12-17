@@ -10,5 +10,5 @@ class LeadViewSet(viewsets.ModelViewSet):
     queryset = Lead.objects.all()
     permission_classes = [
         permissions.AllowAny
-    ***REMOVED***
+    ]
     serializer_class = LeadSerializer
